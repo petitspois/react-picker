@@ -1,5 +1,5 @@
 {
-  "name": "react-picker",
+  "name": "react-pickers",
   "version": "0.0.1",
   "description": "datapicker and citypicker base on MUI of picker",
   "main": "/index.js",

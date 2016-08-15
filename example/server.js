@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config.example');
-var port = 7000;
+var port = 8080;
 var options = {
     publicPath: config.output.publicPath
 };
