@@ -1,0 +1,35 @@
+{
+  "name": "react-picker",
+  "version": "0.0.1",
+  "description": "datapicker and citypicker base on MUI of picker",
+  "main": "/index.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "webpack --config webpack.config.js",
+    "clean": "rm -rf ./lib/*js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "datapicker",
+    "citypicker",
+    "mui"
+  ],
+  "author": "petitspois",
+  "dependencies": {
+    "css-loader": "^0.23.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "style-loader": "^0.13.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
