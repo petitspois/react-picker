@@ -1,7 +1,7 @@
 # react-picker
 datapicker and citypicker base on MUI of picker
 
-<img src="/src/images/show.png" />
+<img src="/src/images/show.png" width="320" />
 
 ### Installation
 
