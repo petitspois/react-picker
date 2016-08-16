@@ -1,5 +1,8 @@
 # react-picker
 datapicker and citypicker base on MUI of picker
+
+<img src="/src/images/show.png" />
+
 ### Installation
 
 Using [npm](https://www.npmjs.com/):
@@ -193,3 +196,16 @@ render(
 ```
 
 See more in the [mui-picker](http://dev.dcloud.net.cn/mui/ui/#picker)
+
+
+### example
+
+```js
+
+npm install
+
+cd example
+
+node server.js
+
+```
