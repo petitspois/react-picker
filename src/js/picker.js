@@ -52,10 +52,11 @@ import mui from './mui'
 		var self = this;
 		self.list = self.holder.querySelector('ul');
 		self.findElementItems();
+		self.standardHeight = document.querySelector('.mui-pciker-rule').getBoundingClientRect()
 		self.height = self.holder.offsetHeight;
 		self.r = self.height / 2 - BLUR_WIDTH;
 		self.d = self.r * 2;
-		self.itemHeight = self.elementItems.length > 0 ? self.elementItems[0].offsetHeight : DEFAULT_ITEM_HEIGHT;
+		self.itemHeight = typeof self.standardHeight == 'object' ? self.standardHeight.height : DEFAULT_ITEM_HEIGHT;
 		self.itemAngle = parseInt(self.calcAngle(self.itemHeight * 0.8));
 		self.hightlightRange = self.itemAngle / 2;
 		self.visibleRange = VISIBLE_RANGE;
