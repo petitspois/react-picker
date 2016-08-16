@@ -5,8 +5,8 @@
   "main": "/index.js",
   "scripts": {
     "start": "node server.js",
-    "build": "webpack --config webpack.config.js",
-    "clean": "rm -rf ./lib/*js",
+    "build": "./node_modules/.bin/babel src --copy-files --extensions .jsx --out-dir lib",
+    "clean": "rm -rf ./lib/*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -23,6 +23,7 @@
     "style-loader": "^0.13.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.11.4",
     "babel-core": "^6.9.1",
     "babel-loader": "^6.2.4",
     "babel-polyfill": "^6.9.1",

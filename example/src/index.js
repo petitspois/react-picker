@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-import '../../lib/picker.css'
+import '../../lib/css/picker.css'
 import { CityPicker, DatePicker } from 'react-picker'
-
 import city2 from '../lib/city-data'
 import city3 from '../lib/city-data-3'
 
