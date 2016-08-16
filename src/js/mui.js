@@ -1774,4 +1774,4 @@ var mui = (function(document, undefined) {
 })(mui, 'tap');
 
 
-module.exports = mui;
+export default  mui;

@@ -120,7 +120,7 @@
 					self._createMinutes();
 				}
 			}, false);
-			
+
 			self._create(options);
 			//防止滚动穿透
 			self.ui.picker.addEventListener($.EVENT_START, function(event) {

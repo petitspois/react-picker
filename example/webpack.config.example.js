@@ -1,5 +1,6 @@
 var path = require('path');
 var node_modules = path.resolve(__dirname, 'node_modules');
+var lib = path.resolve(__dirname, 'lib');
 var webpack = require('webpack');
 
 module.exports = {
@@ -17,7 +18,7 @@ module.exports = {
     module: {
         loaders: [{
                 test: /\.js$/,
-                exclude: /node_modules/,
+                exclude: [/node_modules/, /lib/],
                 loaders: [ 'babel-loader' ]
             },
             {

@@ -1,6 +1,6 @@
 {
   "name": "react-pickers",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "datapicker and citypicker base on MUI of picker",
   "main": "/index.js",
   "repository": "petitspois/react-picker",
@@ -8,7 +8,7 @@
   "bugs": "https://github.com/petitspois/react-picker/issues",
   "scripts": {
     "start": "node server.js",
-    "build": "./node_modules/.bin/babel src --copy-files --extensions .jsx --out-dir lib",
+    "build": "./node_modules/.bin/babel src --copy-files --extensions .js --out-dir lib",
     "clean": "rm -rf ./lib/*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
