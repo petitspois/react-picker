@@ -1,6 +1,6 @@
 {
   "name": "react-pickers",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "datapicker and citypicker base on MUI of picker",
   "main": "/index.js",
   "repository": "petitspois/react-picker",
