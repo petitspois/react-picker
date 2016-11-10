@@ -105,6 +105,8 @@ import mui from './mui'
 		//设置默认选中值
 		setSelectedValue: function(value) {
 
+			if(!value)return false;
+
 			var self = this;
 			var pickers = self.panel.querySelectorAll('.pop-picker');
 			pickers = Array.prototype.slice.call(pickers);
@@ -112,11 +114,13 @@ import mui from './mui'
 
 			//设置
 			function set(pickers,value){
-				while(value.length){
+				if(value.length){
 					var val = value.shift()
 					var pickerObj = pickers.shift()
 					pickerObj.picker.setSelectedValue(val,0,function(pickers,value){
-						set(pickers,value);
+						setTimeout(function(){
+							set(pickers,value);
+						},200)
 					}.bind(this,pickers,value))
 				}
 			}
