@@ -24,7 +24,7 @@ class CityPicker extends Component{
     }
 
     componentDidMount(){
-        this.userPicker = new PopPicker({layer: this.props.layer || '' });
+        this.userPicker = new PopPicker({layer: this.props.layer || '',defaultVal:this.props.defaultVal });
         this.userPicker.setData(this.props.setData);
         this.userPicker.cancel.addEventListener('tap', event => {
             this.props.cancel();

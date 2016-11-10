@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 
 import '../../lib/css/picker.css'
-import { CityPicker, DatePicker } from 'react-picker'
-
+// import { CityPicker, DatePicker } from 'react-picker'
+import { CityPicker, DatePicker } from '../../'
 
 
 import city2 from '../lib/city-data'
@@ -140,9 +140,13 @@ class App extends Component{
                 <button id='showUserPicker' className="mui-btn mui-btn-block" type='button' onClick={ this::this.showCityPicker  }>一级选择示例 ...</button>
                 <CityPicker visible={ this.state.showCityPicker } setData={this.state.singleData} getData={ this::this.getData } confirm={ this::this.ok } cancel={ this::this.cl } />
                 <h5 className="mui-content-padded">级联示例</h5>
+
 				<button id='showCityPicker' className="mui-btn mui-btn-block" type='button' onClick={ this::this.showCity2Picker  }>二级联动示例 ...</button>
-                <CityPicker visible={ this.state.showCity2Picker } layer='2' setData={this.state.city2} getData={ this::this.getData2 } confirm={ this::this.ok2 } cancel={ this::this.cl2 } />
+                <CityPicker visible={ this.state.showCity2Picker } layer='2' setData={this.state.city2}
+                    defaultVal={[110101,110106]}
+                    getData={ this::this.getData2 } confirm={ this::this.ok2 } cancel={ this::this.cl2 } />
                 <div style={{ marginTop: '30px'}}></div>
+
                 <button id='showCityPicker3' className="mui-btn mui-btn-block" type='button' onClick={ this::this.showCity3Picker  }>三级联动示例 ...</button>
                 <CityPicker visible={ this.state.showCity3Picker } layer='3' setData={this.state.city3} getData={ this::this.getData3 } confirm={ this::this.ok3 } cancel={ this::this.cl3 } />
                 <div className="mui-content-padded">
@@ -153,6 +157,7 @@ class App extends Component{
     				<button id='demo2' className="btn mui-btn mui-btn-block" onClick={ this::this.selectDate2 }>选择日期 ...</button>
                     <DatePicker visible={ this.state.showDatePicker2 } options={{"type":"date","beginYear":2014,"endYear":2016}}  getData={ this::this.getData5 } confirm={ this::this.ok5 } cancel={ this::this.cl5 } />
     			</div>
+
             </div>
         )
     }

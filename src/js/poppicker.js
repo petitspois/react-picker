@@ -36,7 +36,7 @@ import mui from './mui'
 		</div>\
 	</div>';
 
-	var pickerBuffer = '<div class="mui-picker">\
+	var pickerBuffer = '<div class="mui-picker pop-picker">\
 		<div class="mui-picker-inner">\
 			<div class="mui-pciker-rule mui-pciker-rule-ft"></div>\
 			<ul class="mui-pciker-list">\
@@ -94,7 +94,33 @@ import mui from './mui'
 					}
 				}, false);
 			}
+
+			setTimeout(function(){
+				//设定默认值
+				self.setSelectedValue(self.options.defaultVal);
+			},100)
 		},
+
+		//设置默认选中值
+		setSelectedValue: function(value) {
+
+			var self = this;
+			var pickers = self.panel.querySelectorAll('.pop-picker');
+			pickers = Array.prototype.slice.call(pickers);
+			set(pickers,value)
+
+			//设置
+			function set(pickers,value){
+				while(value.length){
+					var val = value.shift()
+					var pickerObj = pickers.shift()
+					pickerObj.picker.setSelectedValue(val,0,function(pickers,value){
+						set(pickers,value);
+					}.bind(this,pickers,value))
+				}
+			}
+		},
+
 		//填充数据
 		setData: function(data) {
 			var self = this;
