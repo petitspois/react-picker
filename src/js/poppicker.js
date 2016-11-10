@@ -95,6 +95,7 @@ import mui from './mui'
 				}, false);
 			}
 
+			//等选择数据初始化完后 再设定默认值
 			setTimeout(function(){
 				//设定默认值
 				self.setSelectedValue(self.options.defaultVal);
